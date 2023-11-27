@@ -1,5 +1,5 @@
 import { message } from "antd"
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import { useNavigate } from "react-router-dom"
 import BlocklyCanvasPanel from "../../components/ActivityPanels/BlocklyCanvasPanel/BlocklyCanvasPanel"
 import NavBar from "../../components/NavBar/NavBar"
@@ -72,11 +72,26 @@ export default function BlocklyPage({ isSandbox }) {
     setup()
   }, [isSandbox, navigate, value.role])
 
+  const lessonWindowRef = useRef(null)
+  const handleHide = () => {
+    if (lessonWindowRef.current && !lessonWindowRef.current.closed) {
+      lessonWindowRef.current.close()
+      lessonWindowRef.current = null
+    } else {
+      lessonWindowRef.current = window.open('', '_blank')
+      lessonWindowRef.current.document.write('<html><head><title>Lesson</title></head><body style="background-color: white;">')
+      lessonWindowRef.current.document.write('<h1>Lesson Open</h1>') // Add more HTML content as needed
+      lessonWindowRef.current.document.write('</body></html>')
+      lessonWindowRef.current.document.close()
+    }
+  }
+
   return (
     <div className="container nav-padding">
     <NavBar />
     <div className="blocklyTreeLabel">
-    <button className="Hide">Hide</button>
+    <button id="hideButton" className="Hide" onClick={handleHide}>Hide Lesson</button>
+
     
     
       <BlocklyCanvasPanel activity={activity} setActivity={setActivity} isSandbox={isSandbox} />
