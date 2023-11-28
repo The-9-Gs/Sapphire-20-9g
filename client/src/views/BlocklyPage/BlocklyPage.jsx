@@ -2,6 +2,7 @@ import { message } from "antd"
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import BlocklyCanvasPanel from "../../components/ActivityPanels/BlocklyCanvasPanel/BlocklyCanvasPanel"
+import StudentCanvas from "../../components/ActivityPanels/BlocklyCanvasPanel/canvas/StudentCanvas"
 import NavBar from "../../components/NavBar/NavBar"
 import {
   getAuthorizedWorkspaceToolbox,
@@ -76,11 +77,7 @@ export default function BlocklyPage({ isSandbox }) {
     <div className="container nav-padding">
     <NavBar />
     <div className="blocklyTreeLabel">
-    <button className="Hide">Hide</button>
-    
-    
       <BlocklyCanvasPanel activity={activity} setActivity={setActivity} isSandbox={isSandbox} />
-      
     </div>
   </div>
   )

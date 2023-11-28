@@ -25,9 +25,6 @@ const LessonContent = ({ onClose }) => (
       <h2>Test Lesson</h2>
       <p>This is a sample lesson content.</p>
     </div>
-    <button onClick={onClose} className='close-btn'>
-      <i className='fa fa-times'></i>
-    </button>
   </div>
 );
 
@@ -391,10 +388,16 @@ export default function StudentCanvas({ activity }) {
             spinning={selectedCompile}
           >
             <Row id='icon-control-panel'>
+              
               <Col flex='none' id='section-header'>
                 {activity.lesson_module_name}
               </Col>
+              <button className="Hide" onClick={toggleLessonVisibility}>
+  {lessonVisible ? "Hide Lesson" : "Show Lesson"}
+</button>
+              
               <Col flex='auto'>
+                
                 <Row align='middle' justify='end' id='description-container'>
                   <Col flex={'30px'}>
                     <button
@@ -426,6 +429,7 @@ export default function StudentCanvas({ activity }) {
                           id='link'
                           className='flex flex-column'
                         >
+            
                           <i
                             id='icon-btn'
                             className='fa fa-save'
@@ -436,6 +440,7 @@ export default function StudentCanvas({ activity }) {
                             <div className='popup ModalCompile4'>Save</div>
                           )}
                         </button>
+                        
                       </Col>
 
                       <Col className='flex flex-row' id='icon-align'>
@@ -491,14 +496,6 @@ export default function StudentCanvas({ activity }) {
                       id='action-btn-container'
                       className='flex space-around'
                     >
-                       <button
-                        onClick={toggleLessonVisibility}
-                        className='flex flex-column'
-                        id='link'
-                      >
-                        <i className='fa fa-book' />
-                      </button>
-
                       <ArduinoLogo
                         setHoverCompile={setHoverCompile}
                         handleCompile={handleCompile}
@@ -536,7 +533,7 @@ export default function StudentCanvas({ activity }) {
         </div>
 
           {/* Right side LessonContent */}
-        <div id='lesson-container' className='flex flex-column'>
+          <div id='lesson-container' className='flex flex-column'>
           {lessonVisible && (
             <LessonContent onClose={closeLesson} />
           )}
