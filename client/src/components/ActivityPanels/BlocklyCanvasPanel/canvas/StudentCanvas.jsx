@@ -48,6 +48,9 @@ export default function StudentCanvas({ activity }) {
   const clicks = useRef(0);
   const [lessonVisible, setLessonVisible] = useState(false);
 
+
+  // Use to close and open the lesson 
+
   const lessonViewOnOff = () => {
     console.log("Current state before toggle:", lessonVisible);
     setLessonVisible(!lessonVisible);
@@ -366,15 +369,15 @@ export default function StudentCanvas({ activity }) {
   return (
     <div id='horizontal-container' className='flex flex-column'>
       <div className='flex flex-row'>
+      
+      // The spilt bar component 
       <SplitPane
             split='vertical'
             minSize={300}
             defaultSize={ lessonVisible ? 1000 : 1500 }
             maxSize={ lessonVisible ? 1000 : 1500 }
-            resizerStyle={{ display: lessonVisible ? 'block' : 'none', width: '10px', cursor: 'col-resize', marginRight: '23px', height: '600px', backgroundColor: '#5dc0de' , borderRadius: '30px' }}
+            resizerStyle={{ display: lessonVisible ? 'block' : 'none', width: '10px', cursor: 'col-resize', marginRight: '23px', height: '600px', backgroundColor: '#5BABDE' , borderRadius: '30px' }}
           >
-
-
         <div
           id='bottom-container'
           className='flex flex-column vertical-container overflow-visible'
@@ -390,8 +393,8 @@ export default function StudentCanvas({ activity }) {
                 {activity.lesson_module_name}
               </Col>
               <button className='Hide' onClick={lessonViewOnOff}>
-  {lessonVisible ? "Hide Lesson" : "Show Lesson"}
-</button>
+                {lessonVisible ? "Hide Lesson" : "Show Lesson"}
+              </button>
               <Col flex='auto'>
                 <Row align='middle' justify='end' id='description-container'>
                   <Col flex={'30px'}>
@@ -528,9 +531,9 @@ export default function StudentCanvas({ activity }) {
       {/* THE RIGHT HAND SIDE OF THE WEBPAGE (WHERE LESSON SUPPOSE TO BE) */}
       
       {lessonVisible && (
-  <div id='lesson-container' style={{ backgroundColor: 'lightgray' }}>
+  <div id='lesson-container' style={{ backgroundColor: '#F4F4F5' }}>
     <>
-      <h2>Test Lesson</h2>
+    <h2 style={{ backgroundColor: '#F3D250', borderRadius: '30px', margin: '30px' }}>Test Lesson</h2>
       <p>This is a sample lesson content.</p>
     </>
   </div>
