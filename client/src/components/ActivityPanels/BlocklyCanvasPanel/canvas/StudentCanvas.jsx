@@ -551,10 +551,6 @@ export default function StudentCanvas({ activity }) {
     <>
       <h2 style={{ backgroundColor: '#F3D250', borderRadius: '30px', margin: '30px' }}>Test Lesson</h2>
       <p>This is a sample lesson content.</p>
-      <button id="btn" style={{ marginTop: '300px'}} onClick={() => this.setState({ isHidden: true })}>
-          <img src="../../../../public/images/play2.png" style={{width: '30px', height: '25px', marginLeft: '-6px' }}alt="Image alt text" />
-          <p>Play code replay</p>
-      </button>
     </>
   </div>
 )}
