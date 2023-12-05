@@ -47,10 +47,17 @@ export default function StudentCanvas({ activity }) {
   const replayRef = useRef([]);
   const clicks = useRef(0);
   const [lessonVisible, setLessonVisible] = useState(false);
+  const [buttonVisible, setButtonVisible] = useState(true);
 
   const lessonViewOnOff = () => {
     console.log("Current state before toggle:", lessonVisible);
     setLessonVisible(!lessonVisible);
+    console.log("State after toggle:", !lessonVisible);
+  };
+
+  const buttonViewOnOff = () => {
+    console.log("Current state before toggle:", lessonVisible);
+    setLessonVisible(!buttonVisible);
     console.log("State after toggle:", !lessonVisible);
   };
 
@@ -280,6 +287,19 @@ export default function StudentCanvas({ activity }) {
       setShowConsole(false);
     }
   };
+
+  const handleClick = () => {
+    const btn = document.getElementById('btn');
+
+    btn.addEventListener('click', () => {
+    // 👇️ hide button
+    btn.style.display = 'none';
+
+    // 👇️ show div
+    //const box = document.getElementById('box');
+    //box.style.display = 'block';
+});
+  }
 
   const handlePlotter = async () => {
     if (showConsole) {
@@ -531,6 +551,10 @@ export default function StudentCanvas({ activity }) {
     <>
       <h2 style={{ backgroundColor: '#F3D250', borderRadius: '30px', margin: '30px' }}>Test Lesson</h2>
       <p>This is a sample lesson content.</p>
+      <button id="btn" style={{ marginTop: '300px'}} onClick={() => this.setState({ isHidden: true })}>
+          <img src="../../../../public/images/play2.png" style={{width: '30px', height: '25px', marginLeft: '-6px' }}alt="Image alt text" />
+          <p>Play code replay</p>
+      </button>
     </>
   </div>
 )}

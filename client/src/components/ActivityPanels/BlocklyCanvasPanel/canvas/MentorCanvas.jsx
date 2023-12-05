@@ -458,7 +458,7 @@ export default function MentorCanvas({ activity, isSandbox, setActivity,  isMent
       {/* This xml is for the blocks' menu we will provide. Here are examples on how to include categories and subcategories */}
       <xml id='toolbox' is='Blockly workspace'>
         {
-          // Maps out block categories
+          /* Maps out block categories
           activity &&
             activity.toolbox &&
             activity.toolbox.map(([category, blocks]) => (
@@ -477,7 +477,7 @@ export default function MentorCanvas({ activity, isSandbox, setActivity,  isMent
                   })
                 }
               </category>
-            ))
+            ))*/
         }
       </xml>
 

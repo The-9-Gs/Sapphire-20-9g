@@ -300,9 +300,6 @@ export default function ContentCreatorCanvas({
       <Menu.Item>
         <CodeModal title={'Arduino Code'} workspaceRef={workspaceRef.current} />
       </Menu.Item>
-      <Menu.Item>
-        <h2>Code Replay Editor</h2>
-      </Menu.Item>
     </Menu>
   );
 
