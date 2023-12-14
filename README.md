@@ -8,6 +8,21 @@ Cloud-based programming interface
 ![Deploy Production](https://github.com/STEM-C/CaSMM/workflows/Deploy%20Production/badge.svg)
 
 <br/>
+## List of all project features implemented and associated screenshots of features developed
+-The Workspace Page was updated with Split Screen functionality to view lessons concurrently. 
+-A new tab on the teacher view page to record and see all available code replays and their public statuses.
+-Functionality to toggle lesson view from the teacher dashboard
+-Functionality to turn on/off split-screen functionality.
+## Instructions for how to run the project locally
+-Navigate to client folder
+"yarn"
+"yarn start"
+-Run “docker compose up” in Sapphire20-9g folder 
+-Run “npm install react-split-pane” in Sapphire20-9g folder
+## Outstanding work
+Updating the storing of blocks for code walkthrough. 
+## Built Upon
+React-split-pane library
 
 ## Application
 
