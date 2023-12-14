@@ -7,22 +7,24 @@ Cloud-based programming interface
 ![Deploy Staging](https://github.com/STEM-C/CaSMM/workflows/Deploy%20Staging/badge.svg)
 ![Deploy Production](https://github.com/STEM-C/CaSMM/workflows/Deploy%20Production/badge.svg)
 
-<br/>
+
 ## List of all project features implemented and associated screenshots of features developed
--The Workspace Page was updated with Split Screen functionality to view lessons concurrently. 
--A new tab on the teacher view page to record and see all available code replays and their public statuses.
--Functionality to toggle lesson view from the teacher dashboard
--Functionality to turn on/off split-screen functionality.
+> - The Workspace Page was updated with Split Screen functionality to view lessons concurrently. <br>
+
+> - A new tab on the teacher view page to record and see all available code replays and their public statuses. <br>
+> - Functionality to toggle lesson view from the teacher dashboard <br>
+![Toggle Lesson View - Teacher](https://github.com/The-9-Gs/Sapphire-20-9g/blob/develop/client/public/images/Teacher%20view%20when%20lesson%20view%20is%20enabled%20.png)
+> - Functionality to turn on/off split-screen functionality. <br>
 ## Instructions for how to run the project locally
--Navigate to client folder
-"yarn"
-"yarn start"
--Run “docker compose up” in Sapphire20-9g folder 
--Run “npm install react-split-pane” in Sapphire20-9g folder
+Navigate to client folder 
+- "yarn" <br>
+- "yarn start" <br>
+> Run “docker compose up” in Sapphire20-9g folder <br>
+> Run “npm install react-split-pane” in Sapphire20-9g folder <br>
 ## Outstanding work
-Updating the storing of blocks for code walkthrough. 
+> - Updating the storing of blocks for code walkthrough. <br>
 ## Built Upon
-React-split-pane library
+> - React-split-pane library <br>
 
 ## Application
 
